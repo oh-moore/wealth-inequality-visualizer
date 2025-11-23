@@ -82,93 +82,59 @@ export default function WealthTransferTicker() {
             </div>
           </div>
           
-          {/* Visual Wealth Pool Comparison */}
-          <div className="my-8 max-w-5xl mx-auto">
-            <div className="text-center mb-4">
-              <h3 className="text-lg md:text-xl font-semibold opacity-90">
-                💧 The Shrinking Pool vs The Growing Ocean
-              </h3>
-              <p className="text-sm md:text-base opacity-80 mt-2">
-                Comparing total wealth: Bottom 50% of people vs Top 1%
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
-              {/* The People's Bucket (Bottom 50%) */}
-              <div className="text-center">
-                <div className="relative h-64 flex items-end justify-center">
-                  {/* Tiny bucket */}
-                  <div 
-                    className="w-32 bg-gradient-to-t from-blue-300 to-blue-400 rounded-t-lg relative animate-pulse"
-                    style={{ 
-                      height: `${(peoplesWealth / wealthyWealth * 100) * 2.5}%`,
-                      minHeight: '40px'
-                    }}
-                  >
-                    {/* Dripping effect */}
-                    <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 text-2xl animate-bounce">
-                      💧
+          {/* Visual Wealth Pool Comparison - Clean Bar Chart */}
+          <div className="my-8 max-w-6xl mx-auto px-4">
+            <div className="relative">
+              {/* Bottom 50% - Tiny Bar */}
+              <div className="mb-8">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="text-lg font-bold w-32">Bottom 50%</div>
+                  <div className="flex-1 relative h-16">
+                    <div 
+                      className="absolute left-0 h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-r-lg flex items-center justify-end pr-4 shadow-lg"
+                      style={{ width: '4.5%' }}
+                    >
+                      <span className="text-white font-bold text-sm whitespace-nowrap">£300B</span>
+                    </div>
+                    <div className="absolute left-0 top-0 bottom-0 flex items-center" style={{ left: '5%' }}>
+                      <span className="text-xl animate-bounce ml-2">💧</span>
                     </div>
                   </div>
-                  
-                  {/* Arrow showing drain */}
-                  <div className="absolute bottom-0 right-0 text-3xl animate-pulse">
-                    →
+                  <div className="text-right w-32">
+                    <div className="text-2xl font-bold">4.5%</div>
+                    <div className="text-xs opacity-80">33M people</div>
                   </div>
-                </div>
-                
-                <div className="mt-4 bg-white/10 rounded-lg p-4 backdrop-blur-sm">
-                  <div className="text-sm uppercase tracking-wider opacity-80 mb-1">
-                    Bottom 50% of UK
-                  </div>
-                  <div className="text-3xl font-bold mb-1">£{peoplesWealth}B</div>
-                  <div className="text-lg opacity-90">{peoplesPercent}% of total wealth</div>
-                  <div className="text-xs mt-2 opacity-75">~33 million people</div>
                 </div>
               </div>
               
-              {/* The Wealthy's Ocean (Top 1%) */}
-              <div className="text-center">
-                <div className="relative h-64 flex items-end justify-center">
-                  {/* Massive bucket */}
-                  <div 
-                    className="w-full bg-gradient-to-t from-yellow-400 via-yellow-500 to-yellow-600 rounded-t-lg relative shadow-2xl"
-                    style={{ height: '100%' }}
-                  >
-                    {/* Overflow effect */}
-                    <div className="absolute -top-4 left-0 right-0 flex justify-center gap-2 text-2xl">
-                      💰💰💰
+              {/* Top 1% - Massive Bar */}
+              <div className="mb-6">
+                <div className="flex items-center gap-4 mb-2">
+                  <div className="text-lg font-bold w-32">Top 1%</div>
+                  <div className="flex-1 relative h-16">
+                    <div 
+                      className="absolute left-0 h-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 rounded-r-lg flex items-center justify-end pr-4 shadow-2xl animate-pulse"
+                      style={{ width: '95.5%' }}
+                    >
+                      <span className="text-white font-bold drop-shadow-lg">£6,300B</span>
                     </div>
-                    
-                    {/* Growing indicator */}
-                    <div className="absolute top-4 left-1/2 -translate-x-1/2 text-4xl animate-bounce">
-                      ↑
+                    <div className="absolute right-0 top-0 bottom-0 flex items-center mr-2">
+                      <span className="text-2xl">💰</span>
                     </div>
                   </div>
-                </div>
-                
-                <div className="mt-4 bg-white/10 rounded-lg p-4 backdrop-blur-sm border-2 border-yellow-400">
-                  <div className="text-sm uppercase tracking-wider opacity-80 mb-1">
-                    Top 1% of UK
-                  </div>
-                  <div className="text-3xl font-bold mb-1">£{wealthyWealth.toLocaleString()}B</div>
-                  <div className="text-lg opacity-90">{wealthyPercent}% of total wealth</div>
-                  <div className="text-xs mt-2 opacity-75">~670,000 people</div>
-                  <div className="text-xs mt-1 font-bold text-yellow-200">
-                    21x larger than bottom 50%
+                  <div className="text-right w-32">
+                    <div className="text-2xl font-bold text-yellow-300">95.5%</div>
+                    <div className="text-xs opacity-80">670K people</div>
                   </div>
                 </div>
               </div>
-            </div>
-            
-            {/* Transfer arrow */}
-            <div className="text-center mt-6">
-              <div className="inline-flex items-center gap-3 bg-white/10 px-6 py-3 rounded-full backdrop-blur-sm">
-                <span className="text-xl animate-pulse">⚠️</span>
-                <span className="text-sm md:text-base font-semibold">
-                  Every year, £576B flows from left to right
-                </span>
-                <span className="text-xl animate-pulse">⚠️</span>
+              
+              {/* Key stat */}
+              <div className="text-center mt-8 pt-6 border-t border-white/20">
+                <div className="text-4xl md:text-5xl font-bold mb-2">21x</div>
+                <div className="text-sm md:text-base opacity-90">
+                  The top 1% have 21 times more wealth than the bottom 50%
+                </div>
               </div>
             </div>
           </div>

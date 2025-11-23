@@ -82,62 +82,62 @@ export default function WealthTransferTicker() {
             </div>
           </div>
           
-          {/* Visual Wealth Pool Comparison - Clear and Clean */}
-          <div className="my-6 md:my-10 max-w-6xl mx-auto bg-black/20 rounded-2xl p-4 sm:p-6 md:p-8">
+          {/* Visual Wealth Pool Comparison - Clear and Compact */}
+          <div className="my-6 md:my-10 max-w-4xl mx-auto bg-black/20 rounded-2xl p-4 sm:p-6">
             <h3 className="text-lg sm:text-xl font-bold mb-6 text-center">Who Owns the Wealth?</h3>
             
-            <div className="space-y-8">
+            <div className="space-y-6">
               {/* Bottom 50% */}
-              <div className="bg-white/10 rounded-xl p-4 sm:p-6 backdrop-blur-sm">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-bold flex items-center gap-2">
+              <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div className="flex-shrink-0">
+                    <div className="text-xl sm:text-2xl font-bold flex items-center gap-2">
                       <span>Bottom 50%</span>
-                      <span className="text-xl">💧</span>
+                      <span>💧</span>
                     </div>
-                    <div className="text-sm sm:text-base opacity-80 mt-1">33 million people</div>
+                    <div className="text-xs sm:text-sm opacity-80 mt-0.5">33M people</div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-300">4.5%</div>
-                    <div className="text-xl sm:text-2xl font-semibold mt-1">£300B</div>
+                  <div className="text-right flex-shrink-0">
+                    <div className="text-3xl sm:text-4xl font-bold text-blue-300">4.5%</div>
+                    <div className="text-lg sm:text-xl font-semibold mt-0.5">£300B</div>
                   </div>
                 </div>
-                <div className="w-full bg-white/20 rounded-full h-3 sm:h-4 overflow-hidden">
+                <div className="w-full bg-white/20 rounded-full h-3 overflow-hidden">
                   <div className="h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-full shadow-lg" style={{ width: '4.5%' }}></div>
                 </div>
               </div>
 
               {/* VS Divider */}
-              <div className="text-center">
-                <div className="inline-block bg-white/20 rounded-full px-4 sm:px-6 py-2 text-base sm:text-lg font-bold backdrop-blur-sm">
+              <div className="text-center py-2">
+                <div className="inline-block bg-white/20 rounded-full px-4 py-1.5 text-sm sm:text-base font-bold backdrop-blur-sm">
                   VS
                 </div>
               </div>
 
               {/* Top 1% */}
-              <div className="bg-white/10 rounded-xl p-4 sm:p-6 backdrop-blur-sm border-2 border-yellow-400/50">
-                <div className="flex items-center justify-between mb-4">
-                  <div>
-                    <div className="text-2xl sm:text-3xl font-bold flex items-center gap-2">
+              <div className="bg-white/10 rounded-xl p-4 backdrop-blur-sm border-2 border-yellow-400/50">
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div className="flex-shrink-0">
+                    <div className="text-xl sm:text-2xl font-bold flex items-center gap-2">
                       <span>Top 1%</span>
-                      <span className="text-xl">💰</span>
+                      <span>💰</span>
                     </div>
-                    <div className="text-sm sm:text-base opacity-80 mt-1">670 thousand people</div>
+                    <div className="text-xs sm:text-sm opacity-80 mt-0.5">670K people</div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-300">95.5%</div>
-                    <div className="text-xl sm:text-2xl font-semibold mt-1">£6,300B</div>
+                  <div className="text-right flex-shrink-0">
+                    <div className="text-3xl sm:text-4xl font-bold text-yellow-300">95.5%</div>
+                    <div className="text-lg sm:text-xl font-semibold mt-0.5">£6,300B</div>
                   </div>
                 </div>
-                <div className="w-full bg-white/20 rounded-full h-3 sm:h-4 overflow-hidden">
+                <div className="w-full bg-white/20 rounded-full h-3 overflow-hidden">
                   <div className="h-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-lg animate-pulse" style={{ width: '95.5%' }}></div>
                 </div>
               </div>
 
               {/* Key stat */}
               <div className="text-center pt-4 border-t border-white/20">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">21x</div>
-                <div className="text-sm sm:text-base md:text-lg opacity-90">
+                <div className="text-3xl sm:text-4xl font-bold mb-2">21x</div>
+                <div className="text-sm sm:text-base opacity-90">
                   The top 1% have <strong>21 times more wealth</strong> than the bottom 50%
                 </div>
               </div>

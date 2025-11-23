@@ -18,9 +18,8 @@ export default function Home() {
             A visual exploration of how money flows from ordinary people to the ultra-wealthy
           </p>
           <p className="text-lg text-slate-300 max-w-3xl">
-            Inspired by the work of economist Gary Stevenson, this interactive site reveals 
-            the mechanisms behind rising inequality in the UK - and why it matters to everyone, 
-            regardless of political background.
+            This interactive site reveals the mechanisms behind rising inequality in the UK - 
+            and why it matters to everyone, regardless of political background.
           </p>
         </div>
       </header>
@@ -127,11 +126,6 @@ export default function Home() {
             About This Project
           </h2>
           <div className="prose prose-lg max-w-none text-gray-700">
-            <p className="mb-4">
-              This visualization project is inspired by the work of <strong>Gary Stevenson</strong>, 
-              a former City trader turned economist and educator who has dedicated himself to explaining 
-              wealth inequality in accessible terms.
-            </p>
             <p className="mb-4">
               <strong>Note:</strong> The data shown here is currently <em>illustrative mock data</em> 
               designed to demonstrate the visualization concepts and interactions. The next phase will 

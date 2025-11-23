@@ -1,3 +1,4 @@
+import WealthTransferTicker from '@/components/WealthTransferTicker';
 import WealthFlow from '@/components/WealthFlow';
 import WealthDivergence from '@/components/WealthDivergence';
 import TheSqueeze from '@/components/TheSqueeze';
@@ -23,6 +24,9 @@ export default function Home() {
           </p>
         </div>
       </header>
+
+      {/* Real-time Wealth Transfer Ticker */}
+      <WealthTransferTicker />
 
       {/* Introduction */}
       <section className="max-w-7xl mx-auto px-8 py-12">

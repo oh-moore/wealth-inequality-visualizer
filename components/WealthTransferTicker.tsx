@@ -51,7 +51,7 @@ export default function WealthTransferTicker() {
   const wealthyPercent = (wealthyWealth / totalWealth * 100).toFixed(1);
   
   return (
-    <div className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white py-8 px-6 overflow-hidden">
+    <div className="relative bg-gradient-to-r from-red-600 via-red-700 to-red-800 text-white py-8 md:py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse"></div>
@@ -61,14 +61,14 @@ export default function WealthTransferTicker() {
       <div className="relative max-w-7xl mx-auto">
         <div className="text-center">
           {/* Main label */}
-          <div className="text-sm sm:text-base md:text-lg font-semibold uppercase tracking-wider mb-2 opacity-90 animate-pulse">
+          <div className="text-sm sm:text-base md:text-lg font-semibold uppercase tracking-wider mb-3 md:mb-4 opacity-90 animate-pulse">
             💸 Wealth Transferred to the Top Today
           </div>
           
           {/* The big counter */}
-          <div className="relative">
+          <div className="relative mb-6 md:mb-8">
             <div 
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-3 font-mono"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold tracking-tight font-mono"
               style={{
                 textShadow: '0 0 20px rgba(255, 255, 255, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3)'
               }}
@@ -77,62 +77,62 @@ export default function WealthTransferTicker() {
             </div>
             
             {/* Upward arrow animation */}
-            <div className="absolute -right-4 top-1/2 -translate-y-1/2 text-4xl animate-bounce hidden lg:block">
+            <div className="absolute -right-2 md:-right-4 top-1/2 -translate-y-1/2 text-3xl md:text-4xl animate-bounce hidden lg:block">
               ↗️
             </div>
           </div>
           
-          {/* Visual Wealth Pool Comparison - Clean Bar Chart */}
-          <div className="my-8 max-w-6xl mx-auto px-4">
-            <div className="relative">
+          {/* Visual Wealth Pool Comparison - Responsive Bar Chart */}
+          <div className="my-6 md:my-10 max-w-6xl mx-auto">
+            <div className="relative space-y-6 md:space-y-8">
               {/* Bottom 50% - Tiny Bar */}
-              <div className="mb-8">
-                <div className="flex items-center gap-4 mb-2">
-                  <div className="text-lg font-bold w-32">Bottom 50%</div>
-                  <div className="flex-1 relative h-16">
+              <div>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 md:gap-4">
+                  <div className="text-base md:text-lg font-bold sm:w-24 md:w-32">Bottom 50%</div>
+                  <div className="flex-1 relative h-12 sm:h-14 md:h-16">
                     <div 
-                      className="absolute left-0 h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-r-lg flex items-center justify-end pr-4 shadow-lg"
-                      style={{ width: '4.5%' }}
+                      className="absolute left-0 h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-r-lg flex items-center justify-end pr-2 sm:pr-3 md:pr-4 shadow-lg transition-all"
+                      style={{ width: '8%', minWidth: '60px' }}
                     >
-                      <span className="text-white font-bold text-sm whitespace-nowrap">£300B</span>
+                      <span className="text-white font-bold text-xs sm:text-sm whitespace-nowrap">£300B</span>
                     </div>
-                    <div className="absolute left-0 top-0 bottom-0 flex items-center" style={{ left: '5%' }}>
-                      <span className="text-xl animate-bounce ml-2">💧</span>
+                    <div className="absolute left-0 top-0 bottom-0 flex items-center" style={{ left: '9%' }}>
+                      <span className="text-lg sm:text-xl animate-bounce ml-1 sm:ml-2">💧</span>
                     </div>
                   </div>
-                  <div className="text-right w-32">
-                    <div className="text-2xl font-bold">4.5%</div>
+                  <div className="text-left sm:text-right sm:w-24 md:w-32">
+                    <div className="text-xl sm:text-2xl font-bold">4.5%</div>
                     <div className="text-xs opacity-80">33M people</div>
                   </div>
                 </div>
               </div>
               
               {/* Top 1% - Massive Bar */}
-              <div className="mb-6">
-                <div className="flex items-center gap-4 mb-2">
-                  <div className="text-lg font-bold w-32">Top 1%</div>
-                  <div className="flex-1 relative h-16">
+              <div>
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 md:gap-4">
+                  <div className="text-base md:text-lg font-bold sm:w-24 md:w-32">Top 1%</div>
+                  <div className="flex-1 relative h-12 sm:h-14 md:h-16">
                     <div 
-                      className="absolute left-0 h-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 rounded-r-lg flex items-center justify-end pr-4 shadow-2xl animate-pulse"
-                      style={{ width: '95.5%' }}
+                      className="absolute left-0 h-full bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 rounded-r-lg flex items-center justify-end pr-2 sm:pr-3 md:pr-4 shadow-2xl animate-pulse transition-all"
+                      style={{ width: '100%' }}
                     >
-                      <span className="text-white font-bold drop-shadow-lg">£6,300B</span>
+                      <span className="text-white font-bold text-sm sm:text-base drop-shadow-lg">£6,300B</span>
                     </div>
-                    <div className="absolute right-0 top-0 bottom-0 flex items-center mr-2">
-                      <span className="text-2xl">💰</span>
+                    <div className="absolute right-2 sm:right-4 top-0 bottom-0 flex items-center">
+                      <span className="text-xl sm:text-2xl">💰</span>
                     </div>
                   </div>
-                  <div className="text-right w-32">
-                    <div className="text-2xl font-bold text-yellow-300">95.5%</div>
+                  <div className="text-left sm:text-right sm:w-24 md:w-32">
+                    <div className="text-xl sm:text-2xl font-bold text-yellow-300">95.5%</div>
                     <div className="text-xs opacity-80">670K people</div>
                   </div>
                 </div>
               </div>
               
               {/* Key stat */}
-              <div className="text-center mt-8 pt-6 border-t border-white/20">
-                <div className="text-4xl md:text-5xl font-bold mb-2">21x</div>
-                <div className="text-sm md:text-base opacity-90">
+              <div className="text-center mt-6 md:mt-8 pt-6 border-t border-white/20">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2">21x</div>
+                <div className="text-sm md:text-base opacity-90 px-4">
                   The top 1% have 21 times more wealth than the bottom 50%
                 </div>
               </div>
@@ -140,25 +140,25 @@ export default function WealthTransferTicker() {
           </div>
           
           {/* Stats bar */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-sm md:text-base mt-4 pt-4 border-t border-white/30">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-6 md:gap-8 justify-center items-center text-xs sm:text-sm md:text-base mt-4 md:mt-6 pt-4 md:pt-6 border-t border-white/30">
             <div className="flex items-center gap-2">
               <span className="opacity-80">Every Second:</span>
-              <span className="font-bold text-lg md:text-xl">{perSecond}</span>
+              <span className="font-bold text-base sm:text-lg md:text-xl">{perSecond}</span>
             </div>
-            <div className="hidden sm:block w-px h-8 bg-white/30"></div>
+            <div className="hidden sm:block w-px h-6 md:h-8 bg-white/30"></div>
             <div className="flex items-center gap-2">
               <span className="opacity-80">Total per Day:</span>
-              <span className="font-bold text-lg md:text-xl">{perDay}</span>
+              <span className="font-bold text-base sm:text-lg md:text-xl">{perDay}</span>
             </div>
-            <div className="hidden sm:block w-px h-8 bg-white/30"></div>
+            <div className="hidden sm:block w-px h-6 md:h-8 bg-white/30"></div>
             <div className="flex items-center gap-2">
               <span className="opacity-80">Year:</span>
-              <span className="font-bold text-lg md:text-xl">£576B</span>
+              <span className="font-bold text-base sm:text-lg md:text-xl">£576B</span>
             </div>
           </div>
           
           {/* Subtitle */}
-          <div className="text-xs sm:text-sm md:text-base mt-4 opacity-90 max-w-4xl mx-auto">
+          <div className="text-xs sm:text-sm md:text-base mt-4 md:mt-6 opacity-90 max-w-4xl mx-auto px-4">
             From workers' wages, government revenue, and small savers → flowing to landlords, bondholders, and shareholders
           </div>
         </div>

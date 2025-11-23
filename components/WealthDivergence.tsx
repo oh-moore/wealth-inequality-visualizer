@@ -231,19 +231,19 @@ export default function WealthDivergence() {
   }, []);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h2 className="text-3xl font-bold text-gray-900 mb-3">
+    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
         📊 The Great Divergence
       </h2>
-      <p className="text-gray-600 mb-6 text-lg">
+      <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg">
         How the wealth share has shifted dramatically over the past 40 years
       </p>
-      <div className="w-full overflow-x-auto">
-        <svg ref={svgRef} className="w-full" style={{ minWidth: '1000px' }} />
+      <div className="w-full">
+        <svg ref={svgRef} className="w-full h-auto" />
       </div>
-      <div className="mt-6 bg-red-50 border-l-4 border-red-500 p-4 rounded">
-        <p className="text-red-900 font-semibold">Key Insight:</p>
-        <p className="text-red-800 mt-1">
+      <div className="mt-4 sm:mt-6 bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 rounded">
+        <p className="text-red-900 font-semibold text-sm sm:text-base">Key Insight:</p>
+        <p className="text-red-800 mt-1 text-sm sm:text-base">
           The bottom 50% of the UK population now owns just <strong>2%</strong> of total wealth, 
           down from 10% in 1985. Meanwhile, the top 1% has more than doubled their share to <strong>42%</strong>.
         </p>

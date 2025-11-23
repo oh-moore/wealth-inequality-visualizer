@@ -139,43 +139,43 @@ export default function RecyclingMyth() {
   }, []);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h2 className="text-3xl font-bold text-gray-900 mb-3">
+    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
         ♻️ The Recycling Myth
       </h2>
-      <p className="text-gray-600 mb-6 text-lg">
+      <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg">
         Why wealth at the top doesn't "trickle down" into the real economy
       </p>
-      <div className="w-full overflow-x-auto">
-        <svg ref={svgRef} className="w-full" style={{ minWidth: '1000px' }} />
+      <div className="w-full">
+        <svg ref={svgRef} className="w-full h-auto" />
       </div>
       
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
-          <p className="text-red-900 font-semibold">65% → More Wealth Extraction</p>
-          <p className="text-red-800 mt-1 text-sm">
+      <div className="mt-6 sm:mt-8 grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
+        <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 rounded">
+          <p className="text-red-900 font-semibold text-sm sm:text-base">65% → More Wealth Extraction</p>
+          <p className="text-red-800 mt-1 text-xs sm:text-sm">
             Most wealth is invested in financial assets that generate more income for the wealthy, 
             not productive investment in the real economy.
           </p>
         </div>
-        <div className="bg-gray-50 border-l-4 border-gray-500 p-4 rounded">
-          <p className="text-gray-900 font-semibold">10% → Offshore / No Benefit</p>
-          <p className="text-gray-800 mt-1 text-sm">
+        <div className="bg-gray-50 border-l-4 border-gray-500 p-3 sm:p-4 rounded">
+          <p className="text-gray-900 font-semibold text-sm sm:text-base">10% → Offshore / No Benefit</p>
+          <p className="text-gray-800 mt-1 text-xs sm:text-sm">
             Wealth hidden in tax havens provides zero benefit to the UK economy or workers.
           </p>
         </div>
-        <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
-          <p className="text-green-900 font-semibold">Only 5% → Real Economy</p>
-          <p className="text-green-800 mt-1 text-sm">
+        <div className="bg-green-50 border-l-4 border-green-500 p-3 sm:p-4 rounded">
+          <p className="text-green-900 font-semibold text-sm sm:text-base">Only 5% → Real Economy</p>
+          <p className="text-green-800 mt-1 text-xs sm:text-sm">
             A tiny fraction actually benefits the broader economy through productive investment 
             and job creation.
           </p>
         </div>
       </div>
 
-      <div className="mt-6 bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
-        <p className="text-purple-900 font-semibold">🎯 The Core Problem:</p>
-        <p className="text-purple-800 mt-1">
+      <div className="mt-4 sm:mt-6 bg-purple-50 border-l-4 border-purple-500 p-3 sm:p-4 rounded">
+        <p className="text-purple-900 font-semibold text-sm sm:text-base">🎯 The Core Problem:</p>
+        <p className="text-purple-800 mt-1 text-xs sm:text-sm">
           When you give tax breaks or allow wealth concentration at the top, it doesn't create jobs 
           or boost the economy. It gets locked up in assets that make the wealthy even wealthier, 
           while extracting more money from everyone else through rent, interest, and inflated asset prices. 
@@ -183,10 +183,10 @@ export default function RecyclingMyth() {
         </p>
       </div>
 
-      <div className="mt-6 grid grid-cols-2 gap-4">
-        <div className="bg-blue-50 p-4 rounded">
-          <h4 className="font-semibold text-blue-900 mb-2">What Actually Works:</h4>
-          <ul className="text-blue-800 text-sm space-y-1">
+      <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div className="bg-blue-50 p-3 sm:p-4 rounded">
+          <h4 className="font-semibold text-blue-900 mb-2 text-sm sm:text-base">What Actually Works:</h4>
+          <ul className="text-blue-800 text-xs sm:text-sm space-y-1">
             <li>✓ Progressive taxation</li>
             <li>✓ Strong wage growth</li>
             <li>✓ Public investment in infrastructure</li>
@@ -194,9 +194,9 @@ export default function RecyclingMyth() {
             <li>✓ Strong social safety nets</li>
           </ul>
         </div>
-        <div className="bg-orange-50 p-4 rounded">
-          <h4 className="font-semibold text-orange-900 mb-2">What Doesn't Work:</h4>
-          <ul className="text-orange-800 text-sm space-y-1">
+        <div className="bg-orange-50 p-3 sm:p-4 rounded">
+          <h4 className="font-semibold text-orange-900 mb-2 text-sm sm:text-base">What Doesn't Work:</h4>
+          <ul className="text-orange-800 text-xs sm:text-sm space-y-1">
             <li>✗ Tax cuts for the wealthy</li>
             <li>✗ Deregulation of finance</li>
             <li>✗ Austerity measures</li>

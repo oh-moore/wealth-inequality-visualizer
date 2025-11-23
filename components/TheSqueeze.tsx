@@ -216,27 +216,27 @@ export default function TheSqueeze() {
   }, []);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h2 className="text-3xl font-bold text-gray-900 mb-3">
+    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
         📉 The Squeeze
       </h2>
-      <p className="text-gray-600 mb-6 text-lg">
+      <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg">
         Real wages stagnate while asset prices soar - the gap that's crushing ordinary people
       </p>
-      <div className="w-full overflow-x-auto">
-        <svg ref={svgRef} className="w-full" style={{ minWidth: '1000px' }} />
+      <div className="w-full">
+        <svg ref={svgRef} className="w-full h-auto" />
       </div>
-      <div className="mt-6 grid grid-cols-2 gap-4">
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
-          <p className="text-red-900 font-semibold">Real Wages: -10%</p>
-          <p className="text-red-800 mt-1 text-sm">
+      <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 rounded">
+          <p className="text-red-900 font-semibold text-sm sm:text-base">Real Wages: -10%</p>
+          <p className="text-red-800 mt-1 text-xs sm:text-sm">
             Since 1985, real wages have actually <strong>declined</strong> when adjusted for inflation, 
             despite massive productivity gains.
           </p>
         </div>
-        <div className="bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
-          <p className="text-purple-900 font-semibold">House Prices: +430%</p>
-          <p className="text-purple-800 mt-1 text-sm">
+        <div className="bg-purple-50 border-l-4 border-purple-500 p-3 sm:p-4 rounded">
+          <p className="text-purple-900 font-semibold text-sm sm:text-base">House Prices: +430%</p>
+          <p className="text-purple-800 mt-1 text-xs sm:text-sm">
             Housing costs have exploded, making homeownership impossible for most young people 
             while enriching those who already own property.
           </p>

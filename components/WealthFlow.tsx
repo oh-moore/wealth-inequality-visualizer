@@ -150,20 +150,20 @@ export default function WealthFlow() {
   }, []);
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h2 className="text-3xl font-bold text-gray-900 mb-3">
+    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
         💸 The Wealth Flow
       </h2>
-      <p className="text-gray-600 mb-6 text-lg">
+      <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg">
         Watch how money flows from workers and government to the wealthy elite
       </p>
-      <div className="w-full overflow-x-auto">
-        <svg ref={svgRef} className="w-full" style={{ minWidth: '1000px' }} />
+      <div className="w-full">
+        <svg ref={svgRef} className="w-full h-auto" />
       </div>
-      <div className="mt-6 grid grid-cols-3 gap-4 text-sm">
+      <div className="mt-4 sm:mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 text-sm">
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-4 h-4 rounded-full bg-blue-500"></div>
+            <div className="w-4 h-4 rounded-full bg-blue-500 flex-shrink-0"></div>
             <span className="font-semibold">Sources of Money</span>
           </div>
           <p className="text-gray-600 text-sm">
@@ -172,7 +172,7 @@ export default function WealthFlow() {
         </div>
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-4 h-4 rounded-full bg-orange-500"></div>
+            <div className="w-4 h-4 rounded-full bg-orange-500 flex-shrink-0"></div>
             <span className="font-semibold">Where It Goes</span>
           </div>
           <p className="text-gray-600 text-sm">
@@ -181,7 +181,7 @@ export default function WealthFlow() {
         </div>
         <div>
           <div className="flex items-center gap-2 mb-2">
-            <div className="w-4 h-4 rounded-full bg-red-600"></div>
+            <div className="w-4 h-4 rounded-full bg-red-600 flex-shrink-0"></div>
             <span className="font-semibold">Who Benefits</span>
           </div>
           <p className="text-gray-600 text-sm">

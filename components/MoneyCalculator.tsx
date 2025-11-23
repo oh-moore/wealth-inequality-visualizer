@@ -20,16 +20,16 @@ export default function MoneyCalculator() {
   const percentToWealthy = (toWealthy / monthlyIncome) * 100;
 
   return (
-    <div className="bg-white rounded-xl shadow-lg p-8">
-      <h2 className="text-3xl font-bold text-gray-900 mb-3">
+    <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 md:p-8">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 sm:mb-3">
         💰 Where Your Money Goes
       </h2>
-      <p className="text-gray-600 mb-6 text-lg">
+      <p className="text-gray-600 mb-4 sm:mb-6 text-base sm:text-lg">
         Enter your annual income to see how much flows to the wealthy
       </p>
 
       {/* Income Input */}
-      <div className="mb-8">
+      <div className="mb-6 sm:mb-8">
         <label className="block text-sm font-semibold text-gray-700 mb-2">
           Your Annual Income (£)
         </label>
@@ -42,35 +42,35 @@ export default function MoneyCalculator() {
           onChange={(e) => setIncome(Number(e.target.value))}
           className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer"
         />
-        <div className="flex justify-between mt-2">
-          <span className="text-sm text-gray-600">£15,000</span>
-          <span className="text-2xl font-bold text-blue-600">
+        <div className="flex justify-between mt-2 gap-2">
+          <span className="text-xs sm:text-sm text-gray-600">£15,000</span>
+          <span className="text-xl sm:text-2xl font-bold text-blue-600">
             {formatCurrency(income)}
           </span>
-          <span className="text-sm text-gray-600">£150,000</span>
+          <span className="text-xs sm:text-sm text-gray-600">£150,000</span>
         </div>
       </div>
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-3 gap-4 mb-8">
-        <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-          <p className="text-sm text-blue-900 font-semibold">Monthly Income</p>
-          <p className="text-2xl font-bold text-blue-600 mt-1">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6 sm:mb-8">
+        <div className="bg-blue-50 border-l-4 border-blue-500 p-3 sm:p-4 rounded">
+          <p className="text-xs sm:text-sm text-blue-900 font-semibold">Monthly Income</p>
+          <p className="text-xl sm:text-2xl font-bold text-blue-600 mt-1">
             {formatCurrency(monthlyIncome)}
           </p>
         </div>
-        <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded">
-          <p className="text-sm text-red-900 font-semibold">To Wealthy/Month</p>
-          <p className="text-2xl font-bold text-red-600 mt-1">
+        <div className="bg-red-50 border-l-4 border-red-500 p-3 sm:p-4 rounded">
+          <p className="text-xs sm:text-sm text-red-900 font-semibold">To Wealthy/Month</p>
+          <p className="text-xl sm:text-2xl font-bold text-red-600 mt-1">
             {formatCurrency(toWealthy)}
           </p>
           <p className="text-xs text-red-700 mt-1">
             {percentToWealthy.toFixed(0)}% of your income
           </p>
         </div>
-        <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
-          <p className="text-sm text-green-900 font-semibold">You Keep/Month</p>
-          <p className="text-2xl font-bold text-green-600 mt-1">
+        <div className="bg-green-50 border-l-4 border-green-500 p-3 sm:p-4 rounded">
+          <p className="text-xs sm:text-sm text-green-900 font-semibold">You Keep/Month</p>
+          <p className="text-xl sm:text-2xl font-bold text-green-600 mt-1">
             {formatCurrency(toYou)}
           </p>
           <p className="text-xs text-green-700 mt-1">
@@ -106,20 +106,20 @@ export default function MoneyCalculator() {
       </div>
 
       {/* Annual Impact */}
-      <div className="mt-8 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl p-6">
-        <h3 className="text-xl font-bold mb-2">📅 Annual Impact</h3>
-        <div className="grid grid-cols-2 gap-4">
+      <div className="mt-6 sm:mt-8 bg-gradient-to-r from-red-500 to-orange-500 text-white rounded-xl p-4 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">📅 Annual Impact</h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div>
-            <p className="text-red-100 text-sm">You transfer annually:</p>
-            <p className="text-3xl font-bold">{formatCurrency(toWealthy * 12)}</p>
-            <p className="text-red-100 text-sm mt-1">
+            <p className="text-red-100 text-xs sm:text-sm">You transfer annually:</p>
+            <p className="text-2xl sm:text-3xl font-bold">{formatCurrency(toWealthy * 12)}</p>
+            <p className="text-red-100 text-xs sm:text-sm mt-1">
               to landlords, banks, and corporations
             </p>
           </div>
           <div>
-            <p className="text-red-100 text-sm">Over 30 years, that's:</p>
-            <p className="text-3xl font-bold">{formatCurrency(toWealthy * 12 * 30)}</p>
-            <p className="text-red-100 text-sm mt-1">
+            <p className="text-red-100 text-xs sm:text-sm">Over 30 years, that's:</p>
+            <p className="text-2xl sm:text-3xl font-bold">{formatCurrency(toWealthy * 12 * 30)}</p>
+            <p className="text-red-100 text-xs sm:text-sm mt-1">
               transferred upward in wealth
             </p>
           </div>
@@ -127,9 +127,9 @@ export default function MoneyCalculator() {
       </div>
 
       {/* Insight */}
-      <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded">
-        <p className="text-yellow-900 font-semibold">💡 Think about it:</p>
-        <p className="text-yellow-800 mt-1">
+      <div className="mt-4 sm:mt-6 bg-yellow-50 border-l-4 border-yellow-500 p-3 sm:p-4 rounded">
+        <p className="text-yellow-900 font-semibold text-sm sm:text-base">💡 Think about it:</p>
+        <p className="text-yellow-800 mt-1 text-xs sm:text-sm">
           Most of your money doesn't stay in your pocket or circulate in your local economy. 
           It flows upward to those who already have wealth - through rent, interest, and inflated 
           prices on essentials. This is the mechanism of wealth extraction.
